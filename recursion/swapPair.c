@@ -21,6 +21,8 @@ struct ListNode* swapPairs(struct ListNode* head){
             
                 head = tmp2;
                 head->next = tmp1;
+
+                /* If there are more than 2 nodes, swap remaining list recursively */
                 head->next->next = swapPairs(tmp3);
         }
     }
